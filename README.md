@@ -30,17 +30,22 @@ Configure a different settings.xml for the routes to pull the rules from a "prod
 cd tools
 git clone https://github.com/matallen/camel-kie-example
 git clone https://github.com/matallen/maven-fusecontainer-plugin
+cd ..
+```
+ * Download Fuse distribution from Red Hat Customer Support Portal
+ * Install Fuse distribution into local repository:
+```
+./install-fuse-into-maven-locally.sh jboss-fuse-minimal-6.1.1.redhat-412.zip
 ```
  * Build the whole project
 ```
-cd <root>
 mvn clean install
 ```
 
 ### To run acceptance tests from Jenkins
 ```
 cd acceptance
-mvn clean install -Pfuse,acceptance -o
+mvn clean install -Pfuse,acceptance
 ```
 
 ### To develop your acceptance tests locally
